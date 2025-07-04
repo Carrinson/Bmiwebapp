@@ -3,9 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98.9vh;
     font-family: sans-serif;
-    width: 100vw;
+    min-height: 100vh;
 }
 /* login-signup */
 input{
