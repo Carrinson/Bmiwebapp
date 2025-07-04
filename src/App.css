@@ -1,7 +1,31 @@
  body{
-    background: linear-gradient(25deg, #c03c6c,#4c393b 50%);
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* background: linear-gradient(50deg, #c03c6c,#4c393b 80%); */
     font-family: sans-serif;
+    
 } 
-.side-bar{
+
+.side-bar-con{
+    display: flex;
+    width: 150px;
+
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    border: black 10px solid;
+    position: fixed;
+    /* width: fit-content; */
+    /* height: 100vh; */
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.side-bar{
+    list-style: none;
+
 }

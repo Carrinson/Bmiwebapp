@@ -4,7 +4,9 @@ function Signup() {
 
     return (
     <>
-                     <div className="signup-container">
+    <div className="log-sign_container">
+
+          <div className="signup-container">
             <h1 className="Title"> Sign-Up </h1>
             <div className="sign-up">
               <div className="email">
@@ -33,6 +35,7 @@ function Signup() {
                 </Link>
               </div>
         </div>  
+    </div>
     </>
 
     );
