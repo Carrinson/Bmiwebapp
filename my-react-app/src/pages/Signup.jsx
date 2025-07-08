@@ -4,7 +4,9 @@ function Signup() {
 
     return (
     <>
-                     <div className="signup-container">
+    <div className="log-sign_container">
+
+          <div className="signup-container">
             <h1 className="Title"> Sign-Up </h1>
             <div className="sign-up">
               <div className="email">
@@ -13,11 +15,11 @@ function Signup() {
               </div>
               <div className="username">
                 <p>Username</p>
-                <input id="username" type="password" />
+                <input id="username" type="text" />
               </div>
               <div className="email">
                 <p>Email</p>
-                <input id="email" type="password" />
+                <input id="email" type="email" />
               </div>
               <div className="password">
                 <p>Password</p>
@@ -25,7 +27,7 @@ function Signup() {
               </div>
             </div>
               <div className='btom'>
-                <Link to='/'>
+                <Link to='/login'>
                   <button className='btn'>Log-in</button>
                 </Link>
                 <Link to= '/signup'>
@@ -33,6 +35,7 @@ function Signup() {
                 </Link>
               </div>
         </div>  
+    </div>
     </>
 
     );
