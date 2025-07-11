@@ -1,7 +1,33 @@
 import { Link } from 'react-router';
 import '../components/login-signup.css';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login () {
+  const [than,setThan] = useState();
+  const [those,setThose] = useState();
+  const Navigate = useNavigate();
+
+  
+    const validateuser = () =>{
+    let name = localStorage.getItem("playerid")
+    let pwd = localStorage.getItem("upass")
+    console.log({name}, {pwd})
+    
+    if (name === than && pwd === those){
+      Navigate("/")
+      alert("signed in")
+    }
+    else(
+      alert("wrong login do not hack(it is easy to hack btw)")
+
+    )
+  }
+
+  
+
+
     return (
 
     <>
@@ -11,25 +37,24 @@ function Login () {
               <h1 className="Title"> Login </h1>
               <div className="login">
                 <div className="email">
-                  <p>Email</p>
-                  <input id="email" type="text" />
+                  <p>User name</p>
+                    <input type="text" value={than} onChange={(e)=>{setThan(e.target.value)}} id="username"/>
                 </div>
                 <div className="email">
                   <p>Password</p>
-                  <input id="password" type="password" />
+                    <input type="password" value={those} onChange={(e)=>{setThose(e.target.value)}} id="password" />
                 </div>
               </div>
                 <div className='btom'>
-                  <Link to='/'>
-                    <button className='btn'>Log-in</button>
-                  </Link>
+
+                  <button onClick={validateuser} className='btn'>Login</button>
+                 
+                 
                   <Link to= '/signup'>
-                    <button className='btn'>Sign-up</button>
+                    <button  className='btn'>Sign-up</button>
                   </Link>
 
-                  <Link to= '/'>
-                    <button className='btn'>Dasboard</button>
-                  </Link>
+                  
                   
                 </div>
 
